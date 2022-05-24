@@ -45,7 +45,7 @@ OverlaySupportEntry showOverlayNotification(
 /// [trailing] see more [ListTile.trailing].
 /// [contentPadding] see more [ListTile.contentPadding].
 ///
-/// [background] the background color for notification , default is [ThemeData.accentColor].
+/// [background] the background color for notification , default is [ThemeData.primaryColor].
 /// [foreground] see more [ListTileTheme.textColor],[ListTileTheme.iconColor].
 ///
 /// [elevation] the elevation of notification, see more [Material.elevation].
@@ -73,14 +73,14 @@ OverlaySupportEntry showSimpleNotification(Widget content,
         enable: slideDismiss,
         key: ValueKey(key),
         child: Material(
-          color: background ?? Theme.of(context)?.accentColor,
+          color: background ?? Theme.of(context)?.primaryColor,
           elevation: elevation,
           child: SafeArea(
               bottom: position == NotificationPosition.bottom,
               top: position == NotificationPosition.top,
               child: ListTileTheme(
-                textColor: foreground ?? Theme.of(context)?.accentTextTheme?.title?.color,
-                iconColor: foreground ?? Theme.of(context)?.accentTextTheme?.title?.color,
+                textColor: foreground ?? Theme.of(context)?.textTheme?.titleMedium?.color,
+                iconColor: foreground ?? Theme.of(context)?.textTheme?.titleMedium?.color,
                 child: ListTile(
                   leading: leading,
                   title: content,

@@ -5,7 +5,7 @@ class IosStyleToast extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: DefaultTextStyle(
-        style: Theme.of(context).textTheme.body1.copyWith(color: Colors.white),
+        style: Theme.of(context).textTheme.bodyMedium.copyWith(color: Colors.white),
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Center(
